@@ -1,0 +1,17 @@
+[project]
+name = "choreo-coach"
+version = "0.1.0"
+description = "AI dance coach: compare a dance attempt against a reference and give feedback"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pyyaml>=6"]
+
+[project.optional-dependencies]
+audio = ["librosa>=0.10"]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["scoring"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

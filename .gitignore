@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Large media and raw datasets stay out of git
+data/videos/
+data/aist/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.task

@@ -1,0 +1,27 @@
+# The list of reference moves. Build them with:  python scripts/build_reference.py
+# Paths are relative to this file.
+#
+#   name         unique id; becomes data/references/<name>.npz
+#   pose_file    pose data for the source video:
+#                  - Member A's output (.npz with `angles`, or `landmarks` + `layout`), preferred
+#                  - an AIST++ keypoints2d/keypoints3d .pkl (for development only)
+#   aist_view    camera index for AIST++ keypoints2d (0-8). Use the camera facing the dancer.
+#   audio_file   optional video/audio with the music; enables music sync and beat-aware feedback.
+#                .wav works out of the box; .mp4 needs FFmpeg on PATH or `pip install librosa`.
+#   start_s, end_s   the move's window in the source video (keep moves to ~3-8 seconds)
+#   mirror       true to flip left/right (e.g. to match a TikTok tutorial that's mirrored)
+#
+# Example entries. Check the exact file names in your AIST++ download before uncommenting.
+moves: []
+#  - name: break_basic_01
+#    pose_file: poses/gBR_sBM_c01_d04_mBR0_ch01.npz      # Member A's MediaPipe output for this video
+#    audio_file: videos/gBR_sBM_c01_d04_mBR0_ch01.mp4
+#    start_s: 0.0
+#    end_s: 6.0
+#    description: Break basic, first 8 counts
+#
+#  - name: break_basic_01_dev
+#    pose_file: aist/keypoints2d/gBR_sBM_cAll_d04_mBR0_ch01.pkl   # AIST++ annotations, dev only
+#    aist_view: 0
+#    start_s: 0.0
+#    end_s: 6.0
